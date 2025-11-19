@@ -8,22 +8,23 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    @IBOutlet weak var lblOportunidades: UILabel!
+    
+    @IBOutlet weak var lblNumRandom: UILabel!
+    
+    var OportunidadesViewController: String!
+    var NumRandomViewController: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        lblOportunidades.text = String(OportunidadesViewController)
+        lblNumRandom.text = String(NumRandomViewController)
 
-        // Do any additional setup after loading the view.
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
