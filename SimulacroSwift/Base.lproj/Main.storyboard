@@ -43,14 +43,6 @@
                                     <action selector="btnTres:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cbl-7S-Dlr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JC-f0-QRo">
-                                <rect key="frame" x="16" y="242" width="55" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="4"/>
-                                <connections>
-                                    <action selector="btnCuatro:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Voo-Ts-09C"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdT-KX-uvq">
                                 <rect key="frame" x="169" y="242" width="55" height="35"/>
                                 <state key="normal" title="Button"/>
@@ -100,6 +92,14 @@
                                     <action selector="btnOcho:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Db9-1o-D3I"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JC-f0-QRo">
+                                <rect key="frame" x="16" y="242" width="55" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="4"/>
+                                <connections>
+                                    <action selector="btnCuatro:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Voo-Ts-09C"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -139,7 +139,7 @@
                     </view>
                     <connections>
                         <outlet property="btnCincoOutlet" destination="ZdT-KX-uvq" id="rxk-nj-afC"/>
-                        <outlet property="btnCuatro" destination="0JC-f0-QRo" id="zDG-zC-CB4"/>
+                        <outlet property="btnCuatroOutlet" destination="0JC-f0-QRo" id="NiC-kT-oHn"/>
                         <outlet property="btnDosOutlet" destination="m1o-Un-DBZ" id="8k9-sE-gEE"/>
                         <outlet property="btnNueveOutlet" destination="gSx-VC-Oiq" id="FKq-uZ-Vrb"/>
                         <outlet property="btnOchoOutlet" destination="gnN-P5-EA7" id="svj-J7-7Dj"/>
@@ -162,13 +162,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgD-Ru-Jjf">
-                                <rect key="frame" x="175" y="119" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgD-Ru-Jjf">
+                                <rect key="frame" x="16" y="119" width="361" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7o-S3-1z7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7o-S3-1z7">
                                 <rect key="frame" x="175" y="59" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -178,13 +178,12 @@
                         <viewLayoutGuide key="safeArea" id="IjV-KV-n5H"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QgD-Ru-Jjf" firstAttribute="top" secondItem="M7o-S3-1z7" secondAttribute="bottom" constant="39" id="17K-gD-SSs"/>
-                            <constraint firstItem="M7o-S3-1z7" firstAttribute="top" secondItem="IjV-KV-n5H" secondAttribute="top" constant="59" id="3BG-2o-eCz"/>
-                            <constraint firstItem="M7o-S3-1z7" firstAttribute="leading" secondItem="IjV-KV-n5H" secondAttribute="leading" constant="175" id="6LX-Y2-qkx"/>
-                            <constraint firstItem="M7o-S3-1z7" firstAttribute="trailing" secondItem="QgD-Ru-Jjf" secondAttribute="trailing" id="Ro9-X8-xy5"/>
-                            <constraint firstItem="M7o-S3-1z7" firstAttribute="leading" secondItem="QgD-Ru-Jjf" secondAttribute="leading" id="e6F-qB-xga"/>
-                            <constraint firstItem="M7o-S3-1z7" firstAttribute="centerX" secondItem="AaG-aY-8V5" secondAttribute="centerX" id="vN2-Lh-GOD"/>
-                            <constraint firstItem="IjV-KV-n5H" firstAttribute="bottom" secondItem="QgD-Ru-Jjf" secondAttribute="bottom" constant="619" id="wE6-z2-9y2"/>
+                            <constraint firstItem="QgD-Ru-Jjf" firstAttribute="top" secondItem="M7o-S3-1z7" secondAttribute="bottom" constant="39" id="GKo-Zy-rus"/>
+                            <constraint firstItem="M7o-S3-1z7" firstAttribute="leading" secondItem="IjV-KV-n5H" secondAttribute="leading" constant="175" id="SMv-Mh-s3f"/>
+                            <constraint firstItem="M7o-S3-1z7" firstAttribute="centerX" secondItem="QgD-Ru-Jjf" secondAttribute="centerX" id="ZzT-zK-sje"/>
+                            <constraint firstItem="QgD-Ru-Jjf" firstAttribute="leading" secondItem="AaG-aY-8V5" secondAttribute="leadingMargin" id="fSB-ua-w4H"/>
+                            <constraint firstItem="IjV-KV-n5H" firstAttribute="bottom" secondItem="QgD-Ru-Jjf" secondAttribute="bottom" constant="619" id="mv6-CE-GLd"/>
+                            <constraint firstItem="QgD-Ru-Jjf" firstAttribute="trailing" secondItem="AaG-aY-8V5" secondAttribute="trailingMargin" id="zUW-d1-yAh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Vqh-XN-TwL"/>
@@ -195,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FKP-r4-Xsf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="581" y="42"/>
+            <point key="canvasLocation" x="580.91603053435108" y="41.549295774647888"/>
         </scene>
     </scenes>
     <resources>

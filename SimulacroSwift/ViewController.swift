@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var btnTresOutlet: UIButton!
     
-    @IBOutlet weak var btnCuatro: UIButton!
+    @IBOutlet weak var btnCuatroOutlet: UIButton!
     
     @IBOutlet weak var btnCincoOutlet: UIButton!
     
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     @IBAction func btnUno(_ sender: Any) {
         if(numRandom==1){
             alertError(titulo: "Enhoabuena", mensaje: "Acertado")
-            btnResultadoOutlet.isHidden = false
+            btnUnoOutlet.isHidden = false
         }else{
             opotunidades-=1
             btnNueveOutlet.isEnabled=false
@@ -71,7 +71,7 @@ class ViewController: UIViewController {
     @IBAction func btnDos(_ sender: Any) {
         if(numRandom==2){
             alertError(titulo: "Enhoabuena", mensaje: "Acertado")
-            btnResultadoOutlet.isHidden = false
+            btnDosOutlet.isHidden = false
         }else{
             opotunidades-=1
             btnNueveOutlet.isEnabled=false
@@ -98,7 +98,7 @@ class ViewController: UIViewController {
             btnResultadoOutlet.isHidden = false
         }else{
             opotunidades-=1
-            btnNueveOutlet.isEnabled=false
+            btnTresOutlet.isEnabled=false
             
             if(numRandom<3){
                 alertError(titulo: "Pista", mensaje: "No acertado, estás por encima")
@@ -122,7 +122,7 @@ class ViewController: UIViewController {
             btnResultadoOutlet.isHidden = false
         }else{
             opotunidades-=1
-            btnNueveOutlet.isEnabled=false
+            btnCuatroOutlet.isEnabled=false
             
             if(numRandom<4){
                 alertError(titulo: "Pista", mensaje: "No acertado, estás por encima")
@@ -146,7 +146,7 @@ class ViewController: UIViewController {
             btnResultadoOutlet.isHidden = false
         }else{
             opotunidades-=1
-            btnNueveOutlet.isEnabled=false
+            btnCincoOutlet.isEnabled=false
             
             if(numRandom<5){
                 alertError(titulo: "Pista", mensaje: "No acertado, estás por encima")
@@ -171,7 +171,7 @@ class ViewController: UIViewController {
             btnResultadoOutlet.isHidden = false
         }else{
             opotunidades-=1
-            btnNueveOutlet.isEnabled=false
+            btnSeisOutlet.isEnabled=false
             
             if(numRandom<6){
                 alertError(titulo: "Pista", mensaje: "No acertado, estás por encima")
@@ -195,7 +195,7 @@ class ViewController: UIViewController {
             btnResultadoOutlet.isHidden = false
         }else{
             opotunidades-=1
-            btnNueveOutlet.isEnabled=false
+            btnSieteOutlet.isEnabled=false
             
             if(numRandom<7){
                 alertError(titulo: "Pista", mensaje: "No acertado, estás por encima")
@@ -219,7 +219,7 @@ class ViewController: UIViewController {
             btnResultadoOutlet.isHidden = false
         }else{
             opotunidades-=1
-            btnNueveOutlet.isEnabled=false
+            btnOchoOutlet.isEnabled=false
             
             if(numRandom<8){
                 alertError(titulo: "Pista", mensaje: "No acertado, estás por encima")
@@ -289,12 +289,13 @@ class ViewController: UIViewController {
             if(opotunidades == 0){
                 let destino = segue.destination as! SecondViewController
                 destino.NumRandomViewController = String(numRandom)
-                destino.OportunidadesViewController = String(opotunidades)
+                destino.OportunidadesViewController = ""
+                
                 
             }else{
                 let destino = segue.destination as! SecondViewController
                 destino.NumRandomViewController = String(numRandom)
-                destino.OportunidadesViewController = String(opotunidades)
+                destino.OportunidadesViewController = "te han faltado \(String(opotunidades))"
                
             }
             
